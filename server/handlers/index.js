@@ -1,4 +1,4 @@
-module.exports = { ...require("./auth") };
+module.exports = { ...require("./auth"), ...require("./order") };
 
 module.exports.notFound = (req, res, next) => {
   const err = new Error("Not found");

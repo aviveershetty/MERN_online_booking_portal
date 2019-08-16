@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res, next) => res.json({ hello: "world" }));
 app.use("/api/auth", routes.auth);
+app.use("/api/orders", routes.order);
 
 app.use(handle.notFound);
 app.use(handle.errors);
