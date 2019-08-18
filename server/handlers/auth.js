@@ -32,7 +32,7 @@ exports.login = async (req, res, next) => {
       throw new Error();
     }
   } catch (err) {
-    err.message = "Invalid user";
+    err.message = "Invalid username or password";
     next(err);
   }
 };
