@@ -5,9 +5,13 @@
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "axios": "^0.19.0",
+    "jwt-decode": "^2.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-redux": "^7.1.0",
+    "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
   },
   "nohoist": [
     "**/babel-preset-react-app/@babel/runtime"
