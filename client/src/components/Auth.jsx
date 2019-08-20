@@ -28,25 +28,34 @@ class Auth extends Component {
     const { username, password } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="username">username </label>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <label className="form-label" htmlFor="username">
+            username{" "}
+          </label>
           <input
+            className="form-input"
             type="text"
             value={username}
             name="username"
             onChange={this.handleChange}
             autoComplete="off"
           />
-          <label htmlFor="password">password </label>
+          <label className="form-label" htmlFor="password">
+            password{" "}
+          </label>
           <input
+            className="form-input"
             type="password"
             value={password}
             name="password"
             onChange={this.handleChange}
             autoComplete="off"
           />
-
-          <button type="submit">Submit</button>
+          <div className="button_center">
+            <button className="button" type="submit">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     );

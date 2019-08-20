@@ -4,9 +4,19 @@ import { connect } from "react-redux";
 const Order = ({ order }) => {
   return (
     <div>
-      <h3>{order.quantity}</h3>
-      <h3>{order.location}</h3>
-      <h3>{order.created}</h3>
+      <h2 className="order-title">
+        {order.location} {order.created}
+      </h2>
+      <div className="button_center">
+        <b>Load: </b>
+        <p>{order.quantity} kg</p>
+
+        <b>Location: </b>
+        <p> {order.location}</p>
+
+        <b>Order date: </b>
+        <p> {order.created}</p>
+      </div>
     </div>
   );
 };

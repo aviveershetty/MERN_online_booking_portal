@@ -26,8 +26,10 @@ class CreateOrder extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="quantity">quantity</label>
+      <form className="form" onSubmit={this.handleSubmit}>
+        <label className="form-label" htmlFor="quantity">
+          Load(Enter in Kg/s):
+        </label>
         <input
           className="form-input"
           type="text"
@@ -35,7 +37,9 @@ class CreateOrder extends Component {
           value={this.state.quantity}
           onChange={this.handleChange}
         />
-        <label htmlFor="location">location</label>
+        <label className="form-label" htmlFor="location">
+          Location:
+        </label>
         <input
           className="form-input"
           type="text"
@@ -43,10 +47,11 @@ class CreateOrder extends Component {
           value={this.state.location}
           onChange={this.handleChange}
         />
-
-        <button className="button" type="submit">
-          Submit
-        </button>
+        <div className="button_center">
+          <button className="button" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
     );
   }
