@@ -31,7 +31,7 @@ export const authUser = (path, data) => {
     } catch (err) {
       console.log(err.response.data);
       const { error } = err.response.data;
-      dispatch(addError(error));
+      dispatch(addError("Invalid username or password"));
     }
   };
 };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { authUser, logout } from "../store/actions";
+import { authUser } from "../store/actions";
 
 class Auth extends Component {
   constructor(props) {
@@ -29,23 +29,24 @@ class Auth extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label for="username">username </label>
+          <label htmlFor="username">username </label>
           <input
             type="text"
             value={username}
             name="username"
             onChange={this.handleChange}
+            autoComplete="off"
           />
-          <label for="password">password </label>
+          <label htmlFor="password">password </label>
           <input
             type="password"
             value={password}
             name="password"
             onChange={this.handleChange}
+            autoComplete="off"
           />
-          <div>
-            <button type="submit">Submit</button>
-          </div>
+
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
@@ -54,5 +55,5 @@ class Auth extends Component {
 
 export default connect(
   () => ({}),
-  { authUser, logout }
+  { authUser }
 )(Auth);
