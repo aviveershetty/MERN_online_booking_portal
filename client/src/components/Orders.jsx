@@ -20,15 +20,18 @@ class Orders extends Component {
 
   render() {
     const { auth, getOrders, getUserOrders } = this.props;
-    const orders = this.props.orders.map(order => (
-      <li
-        className="button_center"
-        onClick={() => this.handleSelect(order._id)}
-        key={order._id}
-      >
-        {order.location} {order.created}
-      </li>
-    ));
+    const orders = this.props.orders.map(
+      order =>
+        auth.isAuthenticated && (
+          <li
+            className="button_center"
+            onClick={() => this.handleSelect(order._id)}
+            key={order._id}
+          >
+            {order.location} {order.created}
+          </li>
+        )
+    );
 
     return (
       <Fragment>
