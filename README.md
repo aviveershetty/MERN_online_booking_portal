@@ -1,4 +1,4 @@
-# MERN_online_booking_portal
+# MERN(MongoDB~ExpressJS~ReactJS~NodeJS) online booking application.
 Web application using MERN stack
 
 1. clone repo
